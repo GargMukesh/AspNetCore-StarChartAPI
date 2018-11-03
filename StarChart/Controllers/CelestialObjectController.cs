@@ -69,7 +69,7 @@ namespace StarChart.Controllers
         public IActionResult Update(int id, CelestialObject celestialObject)
         {
             var existingObject = _context.CelestialObjects.Find(id);
-            if(celestialObject == null)
+            if(existingObject == null)
             {
                 return NotFound();
             }
